@@ -1,22 +1,31 @@
+import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import {Context as context} from "../../shared/context"
 import "./placeorder.scss";
 
 export default function Placeorder() {
+  const [display, setDisplay] = useState({step1: 'display-b', step2: 'display-n'})
+  const [loading, setLoading] = useState(false);
   let route =  useLocation(); 
   const auth = context();
+  const card:any = {
+    'Natwest credit card': 'credit',
+    'Natwest debit card': 'debit'
+  }
   const handleOrder = () => {
-    auth.saveToken(route.state.amount)
+    setLoading(true)
+    auth.requestCard({card: card[route.state.selected], amount: route.state.amount})
     .then((data:any) => {
-      if (data === "Successful") {
-        console.log('success')
+      if (data === "Success") {
+        setLoading(false)
+        setDisplay({step1: 'display-n', step2: 'display-b'})
       }
     })
   }
 
   return (
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
-    <div className="col-md-5">
+    <div className={`col-md-5 ${display.step1}`}>
       <div><h3>Place Your Order</h3></div>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
@@ -59,8 +68,29 @@ export default function Placeorder() {
           </div>
         </div>
       </div>
-      <button type="button" className="w-100 btn btn-lg btn-primary" onClick={handleOrder}>Place Your Order and Pay</button>
+      <button type="button" onClick={handleOrder} className={`w-100 btn btn-lg btn-primary ${loading ? "disabled": ""}`}>
+        {loading ? <>
+          <span className="spinner-border spinner-border-sm" aria-hidden="true"></span>
+          <span role="status">Loading...</span>
+        </>: <>Place Your Order and Pay</>}
+      </button>
     </div>
+    <div className={`col-md-5 ${display.step2}`}>
+      <div><h2>Confirmation</h2></div>
+      <div className="card rounded-3 shadow-sm">
+        <div>
+          <div>
+            <div className="box-division mt-3">
+              <div className="text-center"><img width={100} src="https://cdn-icons-png.freepik.com/512/12503/12503852.png?ga=GA1.1.1669094140.1721714955" /></div>
+              <div className="text-center font-b">Transfer complete</div>
+            </div>
+          </div>
+          <div className="box-division">
+            <Link className="link-view" to="/home">home</Link>
+          </div>
+        </div>
+      </div>
+     </div>     
     </div>
   );
 }

@@ -32,16 +32,16 @@ export default function Home() {
           </div>
           <div className="card-body">
             <div className="border-box">
-              <h5 className="card-title pricing-card-title">£21,990</h5>
-              <div>£1,517 / month |  No-cost EMI available</div>
+              <h5 className="card-title pricing-card-title">£89.99</h5>
+              <div>£7.50 / month |  No-cost EMI available</div>
             </div>
             <ul className="mt-3 mb-4 list">
               <li><span>FREE 2.5 months extension</span></li>
-              <li><span>£1,500 amazon voucher</span></li>
-              <li><span>EXTRA £1,500 OFF applied</span></li>
-              <li><span>FREE FitStart benefits worth £,7699* center access</span></li>
+              <li><span>£90 amazon voucher</span></li>
+              <li><span>EXTRA £90 OFF applied</span></li>
+              <li><span>FREE FitStart benefits worth £699* center access</span></li>
             </ul>
-            <button type="button" className="w-100 btn btn-lg btn-primary" onClick={handleBuy(21990, '12 MONTH')}>Buy Now</button>
+            <button type="button" className="w-100 btn btn-lg btn-primary" onClick={handleBuy(89.99, '12 MONTH')}>Buy Now</button>
           </div>
         </div>
       </div>
@@ -52,16 +52,16 @@ export default function Home() {
           </div>
           <div className="card-body">
             <div className="border-box">
-              <h5 className="card-title pricing-card-title">£17,390</h5>
-              <div>£2,174 / month |  No-cost EMI available</div>
+              <h5 className="card-title pricing-card-title">£49.90</h5>
+              <div>£8.34 / month |  No-cost EMI available</div>
             </div>
             <ul className="mt-3 mb-4 list">
-              <li><span>EXTRA £1,500 OFF applied</span></li>
-              <li><span>£750 amazon voucher</span></li>
+              <li><span>EXTRA £90 OFF applied</span></li>
+              <li><span>£45 amazon voucher</span></li>
               <li><span>FREE 2 months extension</span></li>
               <li><span>25 days of membership pause</span></li>
             </ul>
-            <button type="button" className="w-100 btn btn-lg btn-outline-primary" onClick={handleBuy(17390, '6 MONTH')}>Buy Now</button>
+            <button type="button" className="w-100 btn btn-lg btn-outline-primary" onClick={handleBuy(49.99, '6 MONTH')}>Buy Now</button>
           </div>
         </div>
       </div>
@@ -72,16 +72,16 @@ export default function Home() {
           </div>
           <div className="card-body">
             <div className="border-box">
-              <h5 className="card-title pricing-card-title">£12,990</h5>
-              <div>£3,248 / month |  No-cost EMI available</div>
+              <h5 className="card-title pricing-card-title">£9.99</h5>
+              <div>£3.33 / month |  No-cost EMI available</div>
             </div>
             <ul className="mt-3 mb-4 list">
               <li><span>FREE 2.5 months extension</span></li>
-              <li><span>£1,500 amazon voucher</span></li>
-              <li><span>EXTRA £1,500 OFF applied</span></li>
-              <li><span>FREE FitStart benefits worth £,7699* center access</span></li>
+              <li><span>£90 amazon voucher</span></li>
+              <li><span>EXTRA £90 OFF applied</span></li>
+              <li><span>FREE FitStart benefits worth £699* center access</span></li>
             </ul>
-            <button type="button" className="w-100 btn btn-lg btn-outline-primary" onClick={handleBuy(12999, '3 MONTH')}>Buy Now</button>
+            <button type="button" className="w-100 btn btn-lg btn-outline-primary" onClick={handleBuy(9.99, '3 MONTH')}>Buy Now</button>
           </div>
         </div>
       </div>

@@ -64,10 +64,9 @@ export const Provider = ({ children }: any) => {
     }
   };
 
-  const requestTravelInsurance = async (data: any) => {
+  const requestCard = async (data: any) => {
     try {
-      const startDate = data.startDate.replace(/\-/g,'/')
-      const response = await fetch(config.API_URL + "transferToTravelInsurance?period=" + data.insurance + "&startDate=" + startDate, {
+      const response = await fetch(config.API_URL + "payment/" + data.card + "?amount=" + data.amount, {
         method: "POST",
       });
       const responseJson = await response.text();
@@ -78,24 +77,9 @@ export const Provider = ({ children }: any) => {
     }
   };
 
-  const requestTravelAccount = async (amount: any) => {
+  const requestCreditcard = async () => {
     try {
-      const response = await fetch(config.API_URL + "transferToTravelAccount?amount=" + amount, {
-        method: "POST",
-      });
-      const responseJson = await response.text();
-      return responseJson;
-    } catch (err) {
-      // catches errors both in fetch and response.json
-      console.log("api error", err);
-    }
-  };
-
-  const requestOpenAccount = async (data: any) => {
-    try {
-      const amount:any = parseFloat(data.amount)
-      const startDate = data.startDate.replace(/\-/g,'/')
-      const response = await fetch(config.API_URL + "openTravel?=amount=" + amount + "&period=" + data.insurance + "&startDate=" + startDate, {
+      const response = await fetch(config.API_URL + "createCreditCard", {
         method: "POST",
       });
       const responseJson = await response.text();
@@ -112,9 +96,8 @@ export const Provider = ({ children }: any) => {
         state,
         setState,
         saveToken,
-        requestTravelAccount,
-        requestOpenAccount,
-        requestTravelInsurance,
+        requestCreditcard,
+        requestCard,
         
       }}
     >

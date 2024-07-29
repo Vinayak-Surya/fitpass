@@ -1,16 +1,27 @@
-// import {Context as context} from "../../shared/context"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import {Context as context} from "../../shared/context"
 import "./applycard.scss";
 
 export default function Home() {
-  // const auth = context();
+  const auth = context();
+  const [display, setDisplay] = useState({step1: 'display-b', step2: 'display-n'})
+  const [loading, setLoading] = useState(false);
   
   const handlePay = () => {
-    
+    setLoading(true)
+    auth.requestCreditcard()
+    .then((data:any) => {
+      if (data === "Success") {
+        setLoading(false)
+        setDisplay({step1: 'display-n', step2: 'display-b'})
+      }
+    })
   }
 
   return (
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
-    <div className="col-md-4">
+    <div className={`col-md-4 ${display.step1}`}>
       <div><h4>Amazon pay fitpass natwest credit card</h4></div>
       <div className="row g-0 border bgwhite rounded shadow-sm">
         <div className="col-md-4 p28">
@@ -64,10 +75,31 @@ export default function Home() {
             <div className="mt-2 mb-3 ">Your application will be linked to</div>
             <div className="phno">9910707623</div>
           </div>
-          <button type="button" className="w-100 btn btn-lg btn-primary" onClick={handlePay}>Get card in 60 seconds</button>
+          <button type="button" onClick={handlePay} className={`w-100 btn btn-lg btn-primary ${loading ? "disabled": ""}`}>
+            {loading ? <>
+              <span className="spinner-border spinner-border-sm" aria-hidden="true"></span>
+              <span role="status">Loading...</span>
+            </>: <>Get card in 60 seconds</>}
+          </button>
         </div>
       </div>
     </div>
+    <div className={`col-md-5 ${display.step2}`}>
+      <div><h2>Confirmation</h2></div>
+      <div className="card rounded-3 shadow-sm">
+        <div>
+          <div>
+            <div className="box-division mt-3">
+              <div className="text-center"><img width={100} src="https://cdn-icons-png.freepik.com/512/12503/12503852.png?ga=GA1.1.1669094140.1721714955" /></div>
+              <div className="text-center font-b">Transfer complete</div>
+            </div>
+          </div>
+          <div className="box-division">
+            <Link className="link-view" to="/home">home</Link>
+          </div>
+        </div>
+      </div>
+     </div>   
     </div>
   );
 }
