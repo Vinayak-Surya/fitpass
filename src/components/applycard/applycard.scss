@@ -1,0 +1,110 @@
+.paddingall {
+  padding: 0px;
+}
+
+.pr-5 {
+  padding-right: 0px;
+}
+
+.creditcard {
+  text-align: center;
+}
+
+.p28 {
+  padding-left: 18px;
+}
+
+.subs {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.rewards {
+  text-align: center;
+  background-color: #cdc;
+}
+
+.cards-box {
+  position: relative;
+  top: -12px;
+  .cashback5 {
+    position:absolute;
+    top: 30px;
+    left: 72px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .subscription {
+    position:absolute;
+    top:54px;
+    left:6px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.float-r {
+  float: right;
+}
+.cashback td {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 2px;
+}
+
+.approved {
+  background-color: #cdc;
+  border-radius: 0px 3px;
+  text-align: center;
+  padding: 2px 0px;
+  font-weight: bold;
+}
+
+.application {
+  div:first-child {
+    font-weight: bold;
+    color: #42145f;
+  }
+  text-align: center;
+}
+
+.phno {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.percent {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.position-r {
+  position: relative;
+}
+
+.img {
+  top: 5px;
+    position: absolute;
+    right: -30px;
+}
+
+.card-text {
+  color: #333;
+}
+.pad0 {
+  padding: 0px!important;
+}
+.row-pad {
+  padding: 4px;
+  margin: 0px!important;
+  border-bottom: 1px solid #ccc;
+}
+
+.font-w {
+  font-weight: bold;
+}
