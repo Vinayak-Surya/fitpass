@@ -25,7 +25,7 @@ export default function Home() {
       <div><h4>Amazon pay fitpass natwest credit card</h4></div>
       <div className="row g-0 border bgwhite rounded shadow-sm">
         <div className="col-md-4 p28">
-          <img src="src/assets/creditcard.jpeg" className="creditcard" width={120} />
+          <img src="/assets/creditcard.jpeg" className="creditcard" width={120} />
         </div>
         <div className="col-md-6 cards-box">
           <div className="subs">5%</div>

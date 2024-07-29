@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-5 pr-6">
-          <img src="src/assets/card.jpeg" className="float-r" width={120} />
+          <img src="/assets/card.jpeg" className="float-r" width={120} />
         </div>
       </div>
       <div>RECOMMENDED</div>
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-md-11 position-r">
-            <div>Natwest credit card <span><img className="img" src="src/assets/logo.svg" width={50} /></span></div>
+            <div>Natwest credit card <span><img className="img" src="/assets/logo.svg" width={50} /></span></div>
           </div>
         </div>
         <div className="row row-pad">
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-md-11 position-r">
-            <div>Natwest debit card <span><img className="img" src="src/assets/logo.svg" width={50} /></span></div>
+            <div>Natwest debit card <span><img className="img" src="/assets/logo.svg" width={50} /></span></div>
           </div>
         </div>
         <div className="row row-pad">
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-md-11 position-r">
-            <div>Natwest internet banking <span><img className="img" src="src/assets/logo.svg" width={50} /></span></div>
+            <div>Natwest internet banking <span><img className="img" src="/assets/logo.svg" width={50} /></span></div>
           </div>
         </div>
       </div>
