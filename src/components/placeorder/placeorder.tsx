@@ -9,8 +9,8 @@ export default function Placeorder() {
   let route =  useLocation(); 
   const auth = context();
   const card:any = {
-    'Natwest credit card': 'credit',
-    'Natwest debit card': 'debit'
+    'Natwest Card': 'card',
+    'Natwest Internet Banking': 'netbanking'
   }
   const handleOrder = () => {
     setLoading(true)
@@ -26,8 +26,8 @@ export default function Placeorder() {
   return (
     <div className="row row-cols-1 pad10 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
     <div className={`col-md-5 ${display.step1}`}>
-      <div><h3>Place Your Order</h3></div>
-      <nav aria-label="breadcrumb">
+      <div><h3>Cart</h3></div>
+      {/* <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
           <li className="breadcrumb-item"><Link to="/subscriptions">Subcriptions</Link></li>
@@ -35,7 +35,7 @@ export default function Placeorder() {
           <li className="breadcrumb-item"><Link to="/paymentmethods" state={route.state}>{route.state.month}</Link></li>
           <li className="breadcrumb-item active" aria-current="page">{route.state.selected}</li>
         </ol>
-      </nav>
+      </nav> */}
       <div className="font-w mb-2 mt-3">Order now</div>
       <div className="row g-0 border pad0 bgwhite rounded mb-4 shadow-sm">
         <div className="row row-pad">
@@ -45,20 +45,20 @@ export default function Placeorder() {
         </div>
         <div className="row order-pad">
           <div className="col-md-6">
-              Items
+              Subscription
           </div>
           <div className="col-md-6 float-r">
             £{route.state.amount}
           </div>
         </div>
-        <div className="row order-pad">
+        {/* <div className="row order-pad">
           <div className="col-md-6">
               Delivery 
           </div>
           <div className="col-md-6 float-r">
             £0.00
           </div>
-        </div>        
+        </div>         */}
         <div className="row order-pad">
           <div className="col-md-6">
             <span className="total">Order Total:</span> 
@@ -72,7 +72,7 @@ export default function Placeorder() {
         {loading ? <>
           <span className="spinner-border spinner-border-sm" aria-hidden="true"></span>
           <span role="status">Loading...</span>
-        </>: <>Place Your Order and Pay</>}
+        </>: <>Confirm And Pay</>}
       </button>
     </div>
     <div className={`col-md-5 ${display.step2}`}>
@@ -82,11 +82,11 @@ export default function Placeorder() {
           <div>
             <div className="box-division mt-3">
               <div className="text-center"><img width={100} src="https://cdn-icons-png.freepik.com/512/12503/12503852.png?ga=GA1.1.1669094140.1721714955" /></div>
-              <div className="text-center font-b">Transfer complete</div>
+              <div className="text-center font-b">Payment Completed! Congrats, you have upgraded to Elite Member!</div>
             </div>
           </div>
           <div className="box-division">
-            <Link className="link-view" to="/home">home</Link>
+            <Link className="link-view" to="/home">Home</Link>
           </div>
         </div>
       </div>

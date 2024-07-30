@@ -23,7 +23,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-4">
-          <div>starting at £99 / month</div>
+          <div>starting at £9.99 / month</div>
           <button type="button" onClick={handleBuy('Fitpass ELITE')} className="w-100 mt-2 btn btn-lg btn-primary">Buy</button>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-4">
-          <div>starting at £49 month</div>
+          <div>starting at £7.99 / month</div>
           <button type="button" onClick={handleBuy('Fitpass PRO')} className="w-100 mt-2 btn btn-lg btn-primary">Buy</button>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-md-4">
-          <div>starting at £29 / month</div>
+          <div>starting at £5.99 / month</div>
           <button type="button" onClick={handleBuy('Fitpass SELECT')} className="w-100 mt-2 btn btn-lg btn-primary">Buy</button>
         </div>
       </div>

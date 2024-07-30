@@ -7,7 +7,7 @@ export default function Home() {
   const auth = context();
   const [display, setDisplay] = useState({step1: 'display-b', step2: 'display-n'})
   const [loading, setLoading] = useState(false);
-  
+  const [cardNumber , setCardNumber] = useState();
   const handlePay = () => {
     setLoading(true)
     auth.requestCreditcard()
@@ -15,6 +15,7 @@ export default function Home() {
       if (data) {
         setLoading(false)
         setDisplay({step1: 'display-n', step2: 'display-b'})
+        setCardNumber(data)
       }
     })
   }
@@ -22,13 +23,13 @@ export default function Home() {
   return (
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
     <div className={`col-md-4 ${display.step1}`}>
-      <div><h4>Amazon pay fitpass natwest credit card</h4></div>
+      <div><h4>Fitpass Natwest Credit Card</h4></div>
       <div className="row g-0 border bgwhite rounded shadow-sm">
         <div className="col-md-4 p28">
-          <img src="/assets/creditcard.jpeg" className="creditcard" width={120} />
+          <img src="/assets/card.jpeg" className="creditcard" width={120} />
         </div>
         <div className="col-md-6 cards-box">
-          <div className="subs">5%</div>
+          <div className="subs">10%</div>
           <div className="cashback5">cashback'</div>
           <div className="subscription">on subscriptions</div>
         </div>
@@ -68,12 +69,12 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-      <div className="rewards"><img src="/assets/rewards.webp" width={50} /> Apply & get rewards worth <sup>£</sup>200'</div>
+      <div className="rewards"><img src="/assets/rewards.webp" width={50} /> Apply & get rewards worth <sup>£</sup>100'</div>
       <div className="row g-0 border pad0 bgwhite rounded mb-4 shadow-sm">
         <div className="row row-pad">
           <div className="application mb-3">
             <div className="mt-2 mb-3 ">Your application will be linked to</div>
-            <div className="phno">9910707623</div>
+            <div className="phno">99XXXXX123</div>
           </div>
           <button type="button" onClick={handlePay} className={`w-100 btn btn-lg btn-primary ${loading ? "disabled": ""}`}>
             {loading ? <>
@@ -91,11 +92,11 @@ export default function Home() {
           <div>
             <div className="box-division mt-3">
               <div className="text-center"><img width={100} src="https://cdn-icons-png.freepik.com/512/12503/12503852.png?ga=GA1.1.1669094140.1721714955" /></div>
-              <div className="text-center font-b">Transfer complete</div>
+              <div className="text-center font-b">Congratulations! You have now Natwest FitPass Card ending with {cardNumber}</div>
             </div>
           </div>
           <div className="box-division">
-            <Link className="link-view" to="/home">home</Link>
+            <Link className="link-view" to="/home">Home</Link>
           </div>
         </div>
       </div>
