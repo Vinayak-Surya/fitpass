@@ -17,8 +17,8 @@ const initialState = {
 };
 
 const config = {
-  // API_URL: "https://hack-attack.onrender.com/",
-  API_URL: "http://localhost:8080/",
+  API_URL: "https://hack-attack.onrender.com/",
+  // API_URL: "http://localhost:8080/",
 };
 
 const MyContext = createContext<any>(initialState);
