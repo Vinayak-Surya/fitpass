@@ -66,7 +66,10 @@ export const Provider = ({ children }: any) => {
 
   const requestCard = async (data: any) => {
     try {
-      const response = await fetch(config.API_URL + "payment/" + data.card + "?amount=" + data.amount, {
+      if(data.card == "Natwest FitPass Card"){
+        data.card="card"
+      } 
+        const response = await fetch(config.API_URL + "payment/" + data.card + "?amount=" + data.amount, {
         method: "POST",
       });
       const responseJson = await response.text();
