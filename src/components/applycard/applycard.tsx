@@ -12,7 +12,7 @@ export default function Home() {
     setLoading(true)
     auth.requestCreditcard()
     .then((data:any) => {
-      if (data === "Success") {
+      if (data) {
         setLoading(false)
         setDisplay({step1: 'display-n', step2: 'display-b'})
       }
@@ -68,7 +68,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-      <div className="rewards"><img src="src/assets/rewards.webp" width={50} /> Apply & get rewards worth <sup>£</sup>2000'</div>
+      <div className="rewards"><img src="/assets/rewards.webp" width={50} /> Apply & get rewards worth <sup>£</sup>200'</div>
       <div className="row g-0 border pad0 bgwhite rounded mb-4 shadow-sm">
         <div className="row row-pad">
           <div className="application mb-3">

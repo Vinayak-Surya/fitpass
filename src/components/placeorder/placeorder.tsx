@@ -24,7 +24,7 @@ export default function Placeorder() {
   }
 
   return (
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
+    <div className="row row-cols-1 pad10 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
     <div className={`col-md-5 ${display.step1}`}>
       <div><h3>Place Your Order</h3></div>
       <nav aria-label="breadcrumb">

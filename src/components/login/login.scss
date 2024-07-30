@@ -7,16 +7,10 @@
 body {
   font-family: "Poppins", sans-serif !important;
   color: #01403c !important;
-  background: url(http://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg)
-    no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .backbg {
-  background-image: url("https://images.everydayhealth.com/images/healthy-living/fitness/everything-you-need-know-about-fitness-1440x810.jpg?sfvrsn=2fee0a3b_5");
+  background-image: url("/assets/login.jpg");
   background-repeat: repeat-x;
   height: 565px;
 }

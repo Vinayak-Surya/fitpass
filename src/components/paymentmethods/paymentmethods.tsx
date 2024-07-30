@@ -24,7 +24,7 @@ export default function Home() {
   }
 
   return (
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
+    <div className="row row-cols-1 pad10 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
     <div className="col-md-4">
       <div><h3>Select a payment method</h3></div>
       <nav aria-label="breadcrumb">

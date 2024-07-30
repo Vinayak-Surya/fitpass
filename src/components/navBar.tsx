@@ -9,15 +9,20 @@ export function NavBar() {
   const auth = context();
   return (
     <header className="header">
-      <div className="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-        <Link className="d-flex align-items-center link-body-emphasis logo text-decoration-none" to="/">
-        <div><img width={120} src="/assets/logo.jpeg" /></div> <div className="title">Bank of APIs Summer Hackthon</div> 
-        </Link>
+      <div className="row d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <div className="col-md-6">
+          <Link className="me-3 py-2 link-body-emphasis text-decoration-none" to="/">
+            <div className="float-l logo"><img width={120} src="/assets/logo.jpeg" /></div>
+            <div className="title mt-3">Bank of APIs Summer Hackthon</div> 
+          </Link>
+        </div>
+        <div className="col-md-6 float-r">
         <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
           <div className="me-3 py-2 link-body-emphasis text-decoration-none">Welcome <span className="font-b">{auth.state.name}</span></div>
           <Link className="me-3 py-2 link-body-emphasis text-decoration-none" to="/home">Home</Link>
           <Link className="me-3 py-2 link-body-emphasis text-decoration-none" to="/" onClick={logout}>Logout</Link>
         </nav>
+        </div>
       </div>
     </header>
   );

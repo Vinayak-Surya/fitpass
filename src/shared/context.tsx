@@ -79,7 +79,7 @@ export const Provider = ({ children }: any) => {
 
   const requestCreditcard = async () => {
     try {
-      const response = await fetch(config.API_URL + "createCreditCard", {
+      const response = await fetch(config.API_URL + "applyCreditCard", {
         method: "POST",
       });
       const responseJson = await response.text();
