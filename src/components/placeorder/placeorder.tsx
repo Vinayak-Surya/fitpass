@@ -81,7 +81,7 @@ export default function Placeorder() {
         <div>
           <div>
             <div className="box-division mt-3">
-              <div className="text-center"><img width={100} src="https://cdn-icons-png.freepik.com/512/12503/12503852.png?ga=GA1.1.1669094140.1721714955" /></div>
+              <div className="text-center"><img width={100} src="/assets/completed.png" /></div>
               <div className="text-center font-b">Payment Completed! Congrats, you have upgraded to Elite Member!</div>
             </div>
           </div>

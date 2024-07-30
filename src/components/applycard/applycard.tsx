@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="col-md-6 cards-box">
           <div className="subs">10%</div>
-          <div className="cashback5">cashback'</div>
+          <div className="cashback5">cashback*</div>
           <div className="subscription">on subscriptions</div>
         </div>
       </div>
@@ -42,13 +42,13 @@ export default function Home() {
             <td>
               <div className="row">
                 <div className="col-md-4"><div className="percent">5%</div></div>
-                <div className="col-md-6"><span className="font-w">cashback'</span> on plans</div>
+                <div className="col-md-6"><span className="font-w">cashback*</span> on plans</div>
               </div>
             </td>
             <td>
               <div className="row">
                 <div className="col-md-4"><div className="percent">2%</div></div>
-                <div className="col-md-6"><span className="font-w">cashback'</span> on variables</div>
+                <div className="col-md-6"><span className="font-w">cashback*</span> on variables</div>
               </div>
             </td>
           </tr>
@@ -56,7 +56,7 @@ export default function Home() {
             <td>
               <div className="row">
                 <div className="col-md-4"><div className="percent">1%</div></div>
-                <div className="col-md-6"><span className="font-w">cashback'</span> on inapps</div>
+                <div className="col-md-6"><span className="font-w">cashback*</span> on inapps</div>
               </div>
             </td>
             <td>
@@ -69,7 +69,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-      <div className="rewards"><img src="/assets/rewards.webp" width={50} /> Apply & get rewards worth <sup>£</sup>100'</div>
+      <div className="rewards"><img src="/assets/rewards.webp" width={50} /> Apply & get rewards worth <sup>£</sup>100*</div>
       <div className="row g-0 border pad0 bgwhite rounded mb-4 shadow-sm">
         <div className="row row-pad">
           <div className="application mb-3">
@@ -91,7 +91,7 @@ export default function Home() {
         <div>
           <div>
             <div className="box-division mt-3">
-              <div className="text-center"><img width={100} src="https://cdn-icons-png.freepik.com/512/12503/12503852.png?ga=GA1.1.1669094140.1721714955" /></div>
+              <div className="text-center"><img width={100} src="/assets/completed.png" /></div>
               <div className="text-center font-b">Congratulations! You have now Natwest FitPass Card ending with {cardNumber}</div>
             </div>
           </div>
