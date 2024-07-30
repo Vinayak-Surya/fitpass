@@ -9,7 +9,7 @@ export default function Placeorder() {
   let route =  useLocation(); 
   const auth = context();
   const card:any = {
-    'Natwest Card': 'card',
+    'Natwest FitPass Card': 'card',
     'Natwest Internet Banking': 'netbanking'
   }
   const handleOrder = () => {

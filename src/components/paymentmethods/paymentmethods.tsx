@@ -50,7 +50,7 @@ export default function Home() {
         <div className="row row-pad">
           <div className="col-md-1">
             <div className="paddingall">
-              <input type="radio" name="payment" onClick={selectPay} checked value={"Natwest Card"} />
+              <input type="radio" name="payment" onClick={selectPay} checked value={"Natwest FitPass Card"} />
             </div>
           </div>
           <div className="col-md-11 position-r">

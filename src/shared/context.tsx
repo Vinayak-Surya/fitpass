@@ -17,7 +17,8 @@ const initialState = {
 };
 
 const config = {
-  API_URL: "https://hack-attack.onrender.com/",
+  // API_URL: "https://hack-attack.onrender.com/",
+  API_URL: "http://localhost:8080/",
 };
 
 const MyContext = createContext<any>(initialState);
@@ -66,7 +67,9 @@ export const Provider = ({ children }: any) => {
 
   const requestCard = async (data: any) => {
     try {
+      console.log(data);
       if(data.card == "Natwest FitPass Card"){
+        
         data.card="card"
       } 
         const response = await fetch(config.API_URL + "payment/" + data.card + "?amount=" + data.amount, {
