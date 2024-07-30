@@ -22,6 +22,9 @@ export default function Home() {
   const selectPay = (e:any) => {
     setPay(e.target.value)
   }
+  function capitalize(name: string){
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  }
 
   return (
     <div className="row row-cols-1 pad10 row-cols-sm-2 row-cols-md-3 g-3 justify-content">
@@ -38,7 +41,7 @@ export default function Home() {
       <div className="row g-0 border bgwhite rounded mb-4 shadow-sm">
         <div className="col-md-7">
           <div className="paddingall">
-            <p className="mt-3 card-text mb-auto"><span className="font-w">{auth.state.name}</span>, get <span className="font-w">10% back</span> (£ {(route.state.amount / 10).toFixed(2)}) as Prime member on your order. <span className="font-w"><Link to="/apply-card">Apply now!</Link>.</span></p>
+            <p className="mt-3 card-text mb-auto"><span className="font-w">{capitalize(auth.state.name)}</span>, get <span className="font-w">10% back</span> (£ {(route.state.amount / 10).toFixed(2)}) as Prime member on your order. <span className="font-w"><Link to="/apply-card">Apply now!</Link>.</span></p>
           </div>
         </div>
         <div className="col-md-5 pr-6">
