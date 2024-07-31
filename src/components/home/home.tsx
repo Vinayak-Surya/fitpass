@@ -34,7 +34,7 @@ export default function Home() {
           <Link to="#" className="row text-decoration pointer-cursor g-0 border bgwhite rounded h-140 mb-4 shadow-sm align-center">
             <div>
               <img width={70} src="/assets/challanges.jpeg" /></div>
-            <div aria-label="Challanges" className="mt-3 link">Challanges</div>
+            <div aria-label="Challanges" className="mt-3 link">Challenges</div>
           </Link>
         </div>
         <div className="col-md-2">
